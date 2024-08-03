@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="
+                        http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+                        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd">
+
+    <!--    users table schema -->
+    <changeSet id="20240728" author="ayush.pattanayak">
+        <createTable tableName="users">
+            <column name="id" type="integer">
+                <constraints primaryKey="true" primaryKeyName="user_id_pk"/>
+            </column>
+            <column name="name" type="varchar(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="age" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(250)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addAutoIncrement tableName="users" columnName="id" columnDataType="integer" startWith="1" incrementBy="1"/>
+    </changeSet>
+
+    <!--    products table schema -->
+    <changeSet id="20240729" author="ayush.pattanayak">
+        <createTable tableName="products">
+            <column name="product_id" type="integer">
+                <constraints primaryKey="true" primaryKeyName="product_id_pk"/>
+            </column>
+            <column name="product_name" type="varchar(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="available_stocks" type="integer">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addAutoIncrement tableName="products" columnName="product_id" columnDataType="integer" startWith="100" incrementBy="1"/>
+    </changeSet>
+
+    <!--    orders table schema -->
+    <changeSet id="20240730" author="ayush.pattanayak">
+        <createTable tableName="orders">
+            <column name="order_id" type="integer">
+                <constraints primaryKey="true" primaryKeyName="order_id_pk"/>
+            </column>
+            <column name="user_id" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="product_id" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="product_name" type="varchar(150)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="quantity" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(150)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addAutoIncrement tableName="orders" columnName="order_id" columnDataType="integer" startWith="1" incrementBy="1"/>
+    </changeSet>
+
+</databaseChangeLog>

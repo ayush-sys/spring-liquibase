@@ -61,3 +61,206 @@
 2024-07-30 00:11:50 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-07-30 00:11:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-07-30 00:11:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-04 00:09:50 [main] INFO  c.d.s.SpringLiquibaseApplication - Starting SpringLiquibaseApplication using Java 17.0.11 with PID 23012 (/Users/ayushpattanayak/Downloads/spring-liquibase/target/classes started by ayushpattanayak in /Users/ayushpattanayak/Downloads/spring-liquibase)
+2024-08-04 00:09:50 [main] INFO  c.d.s.SpringLiquibaseApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 00:09:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-04 00:09:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2024-08-04 00:09:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-04 00:09:51 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-04 00:09:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-04 00:09:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-04 00:09:51 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-04 00:09:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 452 ms
+2024-08-04 00:09:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-04 00:09:52 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@245253d8
+2024-08-04 00:09:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-04 00:09:52 [main] INFO  liquibase.database - Set default schema name to public
+2024-08-04 00:09:53 [main] INFO  liquibase.changelog - Creating database history table with name: public.databasechangelog
+2024-08-04 00:09:53 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-04 00:09:54 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-08-04 00:09:54 [main] INFO  liquibase.command - Using deploymentId: 2710394559
+2024-08-04 00:09:54 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-04 00:09:54 [main] INFO  liquibase.ui - Running Changeset: db/changelog/scripts/table-schema.xml::20240728::ayush.pattanayak
+2024-08-04 00:09:54 [main] INFO  liquibase.changelog - Table users created
+2024-08-04 00:09:55 [main] INFO  liquibase.changelog - Auto-increment added to users.id
+2024-08-04 00:09:55 [main] INFO  liquibase.changelog - ChangeSet db/changelog/scripts/table-schema.xml::20240728::ayush.pattanayak ran successfully in 459ms
+2024-08-04 00:09:55 [main] INFO  liquibase.ui - Running Changeset: db/changelog/scripts/table-schema.xml::20240729::ayush.pattanayak
+2024-08-04 00:09:55 [main] INFO  liquibase.changelog - Table products created
+2024-08-04 00:09:55 [main] INFO  liquibase.changelog - Auto-increment added to products.product_id
+2024-08-04 00:09:55 [main] INFO  liquibase.changelog - ChangeSet db/changelog/scripts/table-schema.xml::20240729::ayush.pattanayak ran successfully in 406ms
+2024-08-04 00:09:55 [main] INFO  liquibase.ui - Running Changeset: db/changelog/scripts/table-schema.xml::20240730::ayush.pattanayak
+2024-08-04 00:09:55 [main] INFO  liquibase.changelog - Table orders created
+2024-08-04 00:09:56 [main] INFO  liquibase.changelog - Auto-increment added to orders.order_id
+2024-08-04 00:09:56 [main] INFO  liquibase.changelog - ChangeSet db/changelog/scripts/table-schema.xml::20240730::ayush.pattanayak ran successfully in 401ms
+2024-08-04 00:09:56 [main] INFO  liquibase.ui - Running Changeset: db/changelog/scripts/table-data.sql::raw::includeAll
+2024-08-04 00:09:56 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-08-04 00:09:56 [main] INFO  liquibase.changelog - ChangeSet db/changelog/scripts/table-data.sql::raw::includeAll ran successfully in 187ms
+2024-08-04 00:09:56 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-08-04 00:09:56 [main] INFO  liquibase.util - Run:                          4
+2024-08-04 00:09:56 [main] INFO  liquibase.util - Previously run:               0
+2024-08-04 00:09:56 [main] INFO  liquibase.util - Filtered out:                 0
+2024-08-04 00:09:56 [main] INFO  liquibase.util - -------------------------------
+2024-08-04 00:09:56 [main] INFO  liquibase.util - Total change sets:            4
+2024-08-04 00:09:56 [main] INFO  liquibase.util - Update summary generated
+2024-08-04 00:09:56 [main] INFO  liquibase.command - Update command completed successfully.
+2024-08-04 00:09:56 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 14
+2024-08-04 00:09:56 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-04 00:09:56 [main] INFO  liquibase.command - Command execution complete
+2024-08-04 00:09:57 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-04 00:09:57 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-04 00:09:57 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-04 00:09:57 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-04 00:09:57 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-04 00:09:57 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-04 00:09:57 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-04 00:09:57 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-08-04 00:09:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-04 00:09:57 [main] INFO  c.d.s.SpringLiquibaseApplication - Started SpringLiquibaseApplication in 7.179 seconds (process running for 7.376)
+2024-08-04 00:13:16 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-04 00:13:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-04 00:13:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-04 00:13:57 [main] INFO  c.d.s.SpringLiquibaseApplication - Starting SpringLiquibaseApplication using Java 17.0.11 with PID 23047 (/Users/ayushpattanayak/Downloads/spring-liquibase/target/classes started by ayushpattanayak in /Users/ayushpattanayak/Downloads/spring-liquibase)
+2024-08-04 00:13:57 [main] INFO  c.d.s.SpringLiquibaseApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 00:13:57 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-04 00:13:57 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+2024-08-04 00:13:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-04 00:13:57 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-04 00:13:57 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-04 00:13:57 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-04 00:13:57 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-04 00:13:57 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 520 ms
+2024-08-04 00:13:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-04 00:13:58 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b57c345
+2024-08-04 00:13:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-04 00:13:59 [main] INFO  liquibase.database - Set default schema name to public
+2024-08-04 00:13:59 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-04 00:13:59 [main] INFO  liquibase.command - Logging exception.
+2024-08-04 00:13:59 [main] INFO  liquibase.ui - ERROR: Exception Details
+2024-08-04 00:13:59 [main] INFO  liquibase.ui - ERROR: Exception Primary Class:  PSQLException
+2024-08-04 00:13:59 [main] INFO  liquibase.ui - ERROR: Exception Primary Reason:  ERROR: prepared statement "S_1" already exists
+2024-08-04 00:13:59 [main] INFO  liquibase.ui - ERROR: Exception Primary Source:  PostgreSQL 15.6
+2024-08-04 00:13:59 [main] INFO  liquibase.command - Command execution complete
+2024-08-04 00:13:59 [main] WARN  liquibase.database - Failed to restore the auto commit to true
+2024-08-04 00:13:59 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: ERROR: prepared statement "S_2" already exists
+2024-08-04 00:13:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-04 00:14:00 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-04 00:14:00 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-08-04 00:14:00 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-04 00:14:00 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: ERROR: prepared statement "S_2" already exists
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.demo.spring_liquibase.SpringLiquibaseApplication.main(SpringLiquibaseApplication.java:10)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: ERROR: prepared statement "S_2" already exists
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	... 10 common frames omitted
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: ERROR: prepared statement "S_2" already exists
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:259)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 17 common frames omitted
+Caused by: liquibase.exception.DatabaseException: org.postgresql.util.PSQLException: ERROR: prepared statement "S_2" already exists
+	at liquibase.database.jvm.JdbcConnection.setAutoCommit(JdbcConnection.java:487)
+	at liquibase.database.AbstractJdbcDatabase.close(AbstractJdbcDatabase.java:1129)
+	at liquibase.Liquibase.close(Liquibase.java:1449)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:254)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Scope.child(Scope.java:256)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:242)
+	... 19 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: prepared statement "S_2" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:329)
+	at org.postgresql.jdbc.PgConnection.executeTransactionCommand(PgConnection.java:981)
+	at org.postgresql.jdbc.PgConnection.commit(PgConnection.java:1003)
+	at org.postgresql.jdbc.PgConnection.setAutoCommit(PgConnection.java:945)
+	at com.zaxxer.hikari.pool.ProxyConnection.setAutoCommit(ProxyConnection.java:402)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.setAutoCommit(HikariProxyConnection.java)
+	at liquibase.database.jvm.JdbcConnection.setAutoCommit(JdbcConnection.java:485)
+	... 28 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: prepared statement "S_1" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:329)
+	at org.postgresql.jdbc.PgConnection.executeTransactionCommand(PgConnection.java:981)
+	at org.postgresql.jdbc.PgConnection.commit(PgConnection.java:1003)
+	at com.zaxxer.hikari.pool.ProxyConnection.commit(ProxyConnection.java:378)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.commit(HikariProxyConnection.java)
+	at liquibase.database.jvm.JdbcConnection.commit(JdbcConnection.java:247)
+	at liquibase.database.AbstractJdbcDatabase.commit(AbstractJdbcDatabase.java:1089)
+	at liquibase.changelog.StandardChangeLogHistoryService.upgradeChecksums(StandardChangeLogHistoryService.java:296)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.checkLiquibaseTables(DatabaseChangelogCommandStep.java:143)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:91)
+	at liquibase.command.CommandScope.execute(CommandScope.java:219)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1436)
+	at liquibase.Liquibase.update(Liquibase.java:234)
+	at liquibase.Liquibase.update(Liquibase.java:212)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:297)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:249)
+	... 25 common frames omitted
+2024-08-04 00:15:55 [main] INFO  c.d.s.SpringLiquibaseApplication - Starting SpringLiquibaseApplication using Java 17.0.11 with PID 23067 (/Users/ayushpattanayak/Downloads/spring-liquibase/target/classes started by ayushpattanayak in /Users/ayushpattanayak/Downloads/spring-liquibase)
+2024-08-04 00:15:55 [main] INFO  c.d.s.SpringLiquibaseApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-04 00:15:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-04 00:15:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2024-08-04 00:15:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-04 00:15:55 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-04 00:15:55 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-04 00:15:55 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-04 00:15:55 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-04 00:15:55 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 467 ms
+2024-08-04 00:15:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-04 00:15:56 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@32227215
+2024-08-04 00:15:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-04 00:15:56 [main] INFO  liquibase.database - Set default schema name to public
+2024-08-04 00:15:57 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-04 00:15:57 [main] INFO  liquibase.ui - Database is up to date, no changesets to execute
+2024-08-04 00:15:57 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2024-08-04 00:15:57 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-08-04 00:15:57 [main] INFO  liquibase.util - Run:                          0
+2024-08-04 00:15:57 [main] INFO  liquibase.util - Previously run:               4
+2024-08-04 00:15:57 [main] INFO  liquibase.util - Filtered out:                 0
+2024-08-04 00:15:57 [main] INFO  liquibase.util - -------------------------------
+2024-08-04 00:15:57 [main] INFO  liquibase.util - Total change sets:            4
+2024-08-04 00:15:57 [main] INFO  liquibase.util - Update summary generated
+2024-08-04 00:15:58 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-08-04 00:15:58 [main] INFO  liquibase.command - Command execution complete
+2024-08-04 00:15:58 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-04 00:15:58 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-04 00:15:58 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-04 00:15:58 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-04 00:15:58 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-04 00:15:58 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-04 00:15:59 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-04 00:15:59 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-04 00:15:59 [main] INFO  c.d.s.SpringLiquibaseApplication - Started SpringLiquibaseApplication in 4.152 seconds (process running for 4.553)
+2024-08-04 00:15:59 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-04 00:15:59 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-04 00:15:59 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -5,11 +5,25 @@
                         http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
                         http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd">
 
+<!--    &lt;!&ndash;    Create schema if it doesn't exist &ndash;&gt;-->
+<!--    <changeSet id="20240811-create-schema" author="ayush.pattanayak">-->
+<!--        <preConditions onFail="MARK_RAN">-->
+<!--            <not>-->
+<!--                <tableExists schemaName="redcloud" tableName="users"/>-->
+<!--                <tableExists schemaName="redcloud" tableName="products"/>-->
+<!--                <tableExists schemaName="redcloud" tableName="orders"/>-->
+<!--            </not>-->
+<!--        </preConditions>-->
+<!--        <sql>-->
+<!--            CREATE SCHEMA IF NOT EXISTS redcloud;-->
+<!--        </sql>-->
+<!--    </changeSet>-->
+
     <!--    users table schema -->
-    <changeSet id="20240728" author="ayush.pattanayak">
-        <createTable tableName="users">
+    <changeSet id="20240811-create-users-table" author="ayush.pattanayak">
+        <createTable tableName="users" schemaName="redcloud">
             <column name="id" type="integer">
-                <constraints primaryKey="true" primaryKeyName="user_id_pk"/>
+                <constraints primaryKey="true" primaryKeyName="user_id_pk" nullable="false"/>
             </column>
             <column name="name" type="varchar(250)">
                 <constraints nullable="false"/>
@@ -22,14 +36,19 @@
             </column>
         </createTable>
 
-        <addAutoIncrement tableName="users" columnName="id" columnDataType="integer" startWith="1" incrementBy="1"/>
+        <addAutoIncrement tableName="users"
+                          schemaName="redcloud"
+                          columnName="id"
+                          columnDataType="integer"
+                          startWith="1"
+                          incrementBy="1"/>
     </changeSet>
 
     <!--    products table schema -->
-    <changeSet id="20240729" author="ayush.pattanayak">
-        <createTable tableName="products">
+    <changeSet id="20240811-create-products-table" author="ayush.pattanayak">
+        <createTable tableName="products" schemaName="redcloud">
             <column name="product_id" type="integer">
-                <constraints primaryKey="true" primaryKeyName="product_id_pk"/>
+                <constraints primaryKey="true" primaryKeyName="product_id_pk" nullable="false"/>
             </column>
             <column name="product_name" type="varchar(150)">
                 <constraints nullable="false"/>
@@ -39,14 +58,19 @@
             </column>
         </createTable>
 
-        <addAutoIncrement tableName="products" columnName="product_id" columnDataType="integer" startWith="100" incrementBy="1"/>
+        <addAutoIncrement tableName="products"
+                          schemaName="redcloud"
+                          columnName="product_id"
+                          columnDataType="integer"
+                          startWith="100"
+                          incrementBy="1"/>
     </changeSet>
 
     <!--    orders table schema -->
-    <changeSet id="20240730" author="ayush.pattanayak">
-        <createTable tableName="orders">
+    <changeSet id="20240811-create-orders-table" author="ayush.pattanayak">
+        <createTable tableName="orders" schemaName="redcloud">
             <column name="order_id" type="integer">
-                <constraints primaryKey="true" primaryKeyName="order_id_pk"/>
+                <constraints primaryKey="true" primaryKeyName="order_id_pk" nullable="false"/>
             </column>
             <column name="user_id" type="integer">
                 <constraints nullable="false"/>
@@ -65,7 +89,28 @@
             </column>
         </createTable>
 
-        <addAutoIncrement tableName="orders" columnName="order_id" columnDataType="integer" startWith="1" incrementBy="1"/>
+        <addAutoIncrement tableName="orders"
+                          schemaName="redcloud"
+                          columnName="order_id"
+                          columnDataType="integer"
+                          startWith="1"
+                          ncrementBy="1"/>
+
+        <!-- Add foreign key constraint for user_id referencing users table -->
+        <addForeignKeyConstraint baseTableName="orders"
+                                 baseColumnNames="user_id"
+                                 constraintName="fk_orders_user_id"
+                                 referencedTableName="users"
+                                 referencedColumnNames="id"
+                                 schemaName="redcloud"/>
+
+        <!-- Add foreign key constraint for product_id referencing products table -->
+        <addForeignKeyConstraint baseTableName="orders"
+                                 baseColumnNames="product_id"
+                                 constraintName="fk_orders_product_id"
+                                 referencedTableName="products"
+                                 referencedColumnNames="product_id"
+                                 schemaName="redcloud"/>
     </changeSet>
 
 </databaseChangeLog>
